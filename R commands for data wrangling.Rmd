@@ -1,0 +1,11 @@
+# Using case_when function 
+
+To add new column Material based on the string in column V1.
+
+In the following I am creating a column `Material` in the dataframe `data` which consists the value "Sand" when the values in column `V1` are equal to "Sand_ohio"
+
+```{r}
+
+data$Material<- sapply(data$V1,switch,"Sand_ohio"="Sand")
+
+```
